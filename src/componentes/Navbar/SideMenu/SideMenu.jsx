@@ -14,6 +14,10 @@ import User from "../../User";
 import Style from "./SideMenu.module.scss";
 
 const SideMenu = (props) => {
+  const handleClick = (pText) => {
+    props.handleClick(pText);
+  };
+
   return (
     <div className={Style.root} role="presentation">
       <div className={Style.user}>
@@ -23,7 +27,7 @@ const SideMenu = (props) => {
       <List>
         {["Visão geral", "Dispositivos", "Locais", "Configurações"].map(
           (text, index) => (
-            <ListItem button key={text}>
+            <ListItem onClick={() => handleClick(text)} button key={text}>
               <ListItemIcon>
                 {index === 0 ? (
                   <DashboardIcon />

@@ -1,0 +1,25 @@
+.root {
+  padding: 32px;
+}
+.title {
+  margin-bottom: 16px;
+}
+
+.findArea {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.search {
+  width: calc(100% - 96px);
+}
+
+.table {
+  height: 100%;
+}
+
+.addButton {
+  display: flex;
+  justify-content: flex-end;
+}

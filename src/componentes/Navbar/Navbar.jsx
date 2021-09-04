@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-
+import React, { useState, useContext } from "react";
 import {
   AppBar,
   Toolbar,
@@ -10,11 +9,13 @@ import {
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import SideMenu from "./SideMenu";
+import NavbarContext from "./NavbarContext";
 
 import Style from "./Navbar.module.scss";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const { updatePage } = useContext(NavbarContext);
 
   const handleOpen = () => {
     setOpen(true);
@@ -49,7 +50,7 @@ const Navbar = () => {
       </Toolbar>
       <Drawer anchor={"left"} open={open} onClose={handleClose}>
         <div className={Style.sideMenu}>
-          <SideMenu />
+          <SideMenu handleClick={updatePage} />
         </div>
       </Drawer>
     </AppBar>

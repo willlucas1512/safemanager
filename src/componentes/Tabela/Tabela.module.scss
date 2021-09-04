@@ -1,0 +1,23 @@
+.statusBar {
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.cell {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  height: 52.5px;
+  border-bottom: 1px solid;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
